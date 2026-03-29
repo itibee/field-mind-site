@@ -1,283 +1,261 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FieldMind | L'Algoritmo Predittivo per il Live Betting</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            500: '#00ff88', // Verde fluo stile hacker/fintech
-                            600: '#00cc6a',
-                        }
-                    }
-                }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FieldMind | Il radar live che intercetta i gol prima che arrivino</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              500: '#00ff88',
+              600: '#00cc6a'
             }
+          }
         }
-    </script>
-    <style>
-        /* Sfondo animato leggero per dare un tocco tech */
-        .bg-grid {
-            background-size: 40px 40px;
-            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-                              linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-        }
-    </style>
+      }
+    }
+  </script>
+  <style>
+    .bg-grid {
+      background-size: 36px 36px;
+      background-image:
+        linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px);
+    }
+  </style>
 </head>
-<body class="bg-slate-950 text-slate-200 font-sans antialiased selection:bg-brand-500 selection:text-slate-900">
+<body class="bg-slate-950 text-slate-200 antialiased selection:bg-brand-500 selection:text-slate-950">
 
-    <header class="relative overflow-hidden bg-grid min-h-screen flex items-center justify-center pt-10 pb-20">
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-500 opacity-20 blur-[100px] rounded-full pointer-events-none"></div>
-        
-        <div class="relative max-w-5xl mx-auto px-6 text-center z-10">
-            
-            <div class="flex justify-center mb-8">
-                <img src="logofieldmind.png" alt="FieldMind Logo" class="w-72 md:w-[450px] h-auto object-contain rounded-xl shadow-[0_0_40px_rgba(0,255,136,0.2)]">
-            </div>
-
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-700 text-xs font-medium text-brand-500 mb-6 uppercase tracking-wider">
-                <span class="relative flex h-3 w-3">
-                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-500 opacity-75"></span>
-                  <span class="relative inline-flex rounded-full h-3 w-3 bg-brand-500"></span>
-                </span>
-                Radar Live Attivo sulle partite di oggi
-            </div>
-            
-            <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-6 uppercase leading-tight">
-                Tu non puoi seguire 200 partite live.<br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-emerald-400">FieldMind lo fa per te</span>.
-            </h1>
-            
-            <p class="text-lg md:text-2xl text-slate-400 mb-10 max-w-3xl mx-auto font-light">
-                Non sfidare i bookmaker con le sensazioni. <strong class="text-white">FieldMind</strong> è l'Intelligenza Artificiale che analizza migliaia di dati live al secondo e ti invia i segnali su Telegram quando la pressione offensiva aumenta.
-            </p>
-            
-            <div class="flex flex-col items-center gap-4">
-                <a href="https://t.me/fieldmind_app" class="group relative inline-flex items-center justify-center gap-3 px-8 py-4 text-lg font-bold text-slate-950 bg-brand-500 rounded-lg hover:bg-white transition-all duration-300 transform hover:scale-105 shadow-[0_0_40px_rgba(0,255,136,0.4)] hover:shadow-[0_0_60px_rgba(0,255,136,0.6)] animate-pulse">
-                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM16.64 8.8C16.49 10.38 15.84 14.22 15.51 15.99C15.37 16.74 15.09 16.99 14.83 17.02C14.25 17.07 13.81 16.64 13.25 16.27C12.37 15.69 11.87 15.33 11.02 14.77C10.03 14.12 10.67 13.76 11.24 13.18C11.39 13.03 13.95 10.7 14 10.49C14.01 10.46 14.01 10.35 13.93 10.29C13.85 10.23 13.74 10.25 13.66 10.27C13.54 10.29 11.7 11.52 8.12 13.96C7.6 14.32 7.12 14.49 6.69 14.48C6.21 14.47 5.29 14.2 4.61 13.98C3.77 13.71 3.11 13.57 3.17 13.11C3.2 12.87 3.53 12.62 4.16 12.36C8.03 10.68 10.61 9.58 11.9 9.05C15.58 7.54 16.34 7.28 16.84 7.27C16.95 7.27 17.2 7.3 17.36 7.43C17.49 7.54 17.53 7.69 17.54 7.8C17.54 7.87 17.53 8.01 17.52 8.07C16.64 8.8 16.64 8.8 16.64 8.8Z"/>
-                    </svg>
-                    ENTRA GRATIS NEL CANALE PUBBLICO
-                </a>
-                <p class="text-sm text-slate-500">7 Giorni di Trial Gratuito al canale VIP.</p>
-            </div>
-        </div>
-    </header>
-
-    <section class="py-20 bg-slate-900 border-t border-b border-slate-800">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-10">
-                <div class="p-8 rounded-2xl bg-slate-950 border border-red-900/30 relative overflow-hidden">
-                    <div class="absolute top-0 left-0 w-2 h-full bg-red-500"></div>
-                    <h3 class="text-2xl font-bold text-white mb-4">I perdenti scommettono così:</h3>
-                    <ul class="space-y-4 text-slate-400">
-                        <li class="flex items-start gap-3"><span class="text-red-500">❌</span> Vanno "a sensazione" guardando le quote pre-match.</li>
-                        <li class="flex items-start gap-3"><span class="text-red-500">❌</span> Seguono i finti guru su Instagram.</li>
-                        <li class="flex items-start gap-3"><span class="text-red-500">❌</span> Ignorano i trend di pressione degli ultimi 5 minuti.</li>
-                    </ul>
-                </div>
-                <div class="p-8 rounded-2xl bg-slate-950 border border-brand-500/30 relative overflow-hidden shadow-[0_0_30px_rgba(0,255,136,0.1)]">
-                    <div class="absolute top-0 left-0 w-2 h-full bg-brand-500"></div>
-                    <h3 class="text-2xl font-bold text-white mb-4">FieldMind investe così:</h3>
-                    <ul class="space-y-4 text-slate-300">
-                        <li class="flex items-start gap-3"><span class="text-brand-500">✅</span> Matematica pura: analizza tiri, possesso e attacchi in tempo reale.</li>
-                        <li class="flex items-start gap-3"><span class="text-brand-500">✅</span> Calcola il "Momentum" esatto per prevedere il prossimo gol.</li>
-                        <li class="flex items-start gap-3"><span class="text-brand-500">✅</span> Filtra i falsi segnali (API Dump, VAR) con uno scudo algoritmico.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 bg-slate-950 relative">
-        <div class="max-w-6xl mx-auto px-6 text-center">
-            <h2 class="text-4xl font-extrabold text-white mb-16 uppercase tracking-wide">Cosa c'è sotto il cofano</h2>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
-                <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-brand-500 transition-colors duration-300 group">
-                    <div class="w-12 h-12 bg-slate-950 rounded-lg flex items-center justify-center text-brand-500 mb-4 group-hover:scale-110 transition-transform">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
-                    </div>
-                    <h4 class="text-xl font-bold text-white mb-2">Scansione Match Live</h4>
-                    <p class="text-sm text-slate-400">Analizza simultaneamente tiri in porta, cartellini rossi e attacchi pericolosi su tutti i campi del mondo.</p>
-                </div>
-                <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-brand-500 transition-colors duration-300 group">
-                    <div class="w-12 h-12 bg-slate-950 rounded-lg flex items-center justify-center text-brand-500 mb-4 group-hover:scale-110 transition-transform">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                    </div>
-                    <h4 class="text-xl font-bold text-white mb-2">Indice di Pressione</h4>
-                    <p class="text-sm text-slate-400">Calcola lo *Shot Pressure Index* (SPI) valutando il volume di gioco degli ultimi 5 e 10 minuti.</p>
-                </div>
-                <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-brand-500 transition-colors duration-300 group">
-                    <div class="w-12 h-12 bg-slate-950 rounded-lg flex items-center justify-center text-brand-500 mb-4 group-hover:scale-110 transition-transform">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                    </div>
-                    <h4 class="text-xl font-bold text-white mb-2">Tecnologia Shield</h4>
-                    <p class="text-sm text-slate-400">Scudo integrato contro le anomalie delle API. Blocca falsi segnali, rigori annullati e goal tolti dal VAR.</p>
-                </div>
-                <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-brand-500 transition-colors duration-300 group">
-                    <div class="w-12 h-12 bg-slate-950 rounded-lg flex items-center justify-center text-brand-500 mb-4 group-hover:scale-110 transition-transform">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
-                    </div>
-                    <h4 class="text-xl font-bold text-white mb-2">Alert Istantanei</h4>
-                    <p class="text-sm text-slate-400">L'anomalia viene rilevata? Il segnale arriva sul tuo Telegram in frazioni di secondo, pronto da giocare.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 bg-slate-950 border-t border-slate-900 relative overflow-hidden">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-full bg-brand-500 opacity-5 blur-[150px] pointer-events-none"></div>
-
-        <div class="max-w-6xl mx-auto px-6 relative z-10">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6 uppercase tracking-tight">La Verità del Campo.<br><span class="text-slate-500">Nessun Segreto.</span></h2>
-                <p class="text-xl text-slate-400 max-w-3xl mx-auto">Chi cerca la perfezione vive di illusioni. Chi usa FieldMind vive di dati, matematica e bilanci a fine mese. Ecco i nostri report non censurati.</p>
-            </div>
-
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                
-                <div class="relative group">
-                    <div class="absolute -inset-1 bg-gradient-to-r from-brand-500 to-emerald-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
-                    <div class="relative bg-slate-900 p-2 rounded-2xl border border-slate-800 shadow-2xl">
-                        <img src="./screen torino.png" alt="Alert FieldMind Torino" class="w-full rounded-xl opacity-90 hover:opacity-100 transition-opacity">
-                        <img src="./torino esito.png" alt="Cassa Torino Parma" class="absolute -bottom-6 -right-6 w-3/4 md:w-2/3 rounded-xl border-4 border-slate-900 shadow-[0_20px_50px_rgba(0,0,0,0.8)] transform group-hover:-translate-y-2 group-hover:translate-x-2 transition-all duration-300">
-                    </div>
-                </div>
-
-                <div class="flex flex-col gap-6">
-                    
-                    <div class="bg-slate-900/80 border border-slate-700 rounded-xl p-6 backdrop-blur-sm">
-                        <div class="flex items-center justify-between mb-4 border-b border-slate-800 pb-4">
-                            <h3 class="text-lg font-bold text-white uppercase tracking-wider flex items-center gap-2">
-                                <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span> La Trasparenza Prima di tutto
-                            </h3>
-                            <span class="text-xs text-slate-500 font-mono">13.03.2026 | 22:59</span>
-                        </div>
-                        <p class="text-sm text-slate-400 mb-6 italic">"Stasera non è stata una passeggiata, è stata una guerra. Pali, parate miracolose e sfortuna nera. Ma FieldMind non si piega. Abbiamo incassato i colpi e risposto col fuoco."</p>
-                        
-                        <div class="grid grid-cols-3 gap-4 text-center">
-                            <div class="bg-slate-950 border border-slate-800 rounded-lg p-3">
-                                <div class="text-2xl font-black text-white">26</div>
-                                <div class="text-xs text-slate-500 uppercase">Match</div>
-                            </div>
-                            <div class="bg-slate-950 border border-brand-500/30 rounded-lg p-3 shadow-[0_0_15px_rgba(0,255,136,0.1)]">
-                                <div class="text-2xl font-black text-brand-500">16</div>
-                                <div class="text-xs text-brand-500 uppercase">Target Hit</div>
-                            </div>
-                            <div class="bg-slate-950 border border-slate-800 rounded-lg p-3">
-                                <div class="text-2xl font-black text-white">61.5%</div>
-                                <div class="text-xs text-slate-500 uppercase">Win Rate</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-slate-900/80 border border-slate-700 rounded-xl p-6 backdrop-blur-sm">
-                        <div class="flex items-center justify-between mb-4 border-b border-slate-800 pb-4">
-                            <h3 class="text-lg font-bold text-white uppercase tracking-wider flex items-center gap-2">
-                                <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span> Radar Notturno
-                            </h3>
-                            <span class="text-xs text-slate-500 font-mono">13.03.2026 | 07:41</span>
-                        </div>
-                        <p class="text-sm text-slate-400 mb-6 italic">"Quando l’Europa si spegne... Brasile, Libertadores, CONCACAF. Il calcio non dorme mai. E neanche lo Scanner."</p>
-                        
-                        <div class="grid grid-cols-3 gap-4 text-center">
-                            <div class="bg-slate-950 border border-slate-800 rounded-lg p-3">
-                                <div class="text-2xl font-black text-white">18</div>
-                                <div class="text-xs text-slate-500 uppercase">Alerts</div>
-                            </div>
-                            <div class="bg-slate-950 border border-brand-500/30 rounded-lg p-3 shadow-[0_0_15px_rgba(0,255,136,0.1)]">
-                                <div class="text-2xl font-black text-brand-500">14</div>
-                                <div class="text-xs text-brand-500 uppercase">Target Hit</div>
-                            </div>
-                            <div class="bg-slate-950 border border-slate-800 rounded-lg p-3">
-                                <div class="text-2xl font-black text-white">78%</div>
-                                <div class="text-xs text-slate-500 uppercase">Win Rate</div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 bg-slate-950 relative overflow-hidden border-t border-slate-900">
-    <div class="max-w-6xl mx-auto px-6 relative z-10">
-        
-        <div class="flex flex-col lg:flex-row gap-12 items-center">
-            
-            <div class="w-full lg:w-1/2 flex justify-center">
-                <div class="relative w-80 h-80 md:w-[450px] md:h-[450px]">
-                    <div class="absolute inset-0 border-2 border-brand-500/20 rounded-full animate-[ping_5s_linear_infinite]"></div>
-                    <div class="absolute inset-4 border border-brand-500/10 rounded-full"></div>
-                    <div class="absolute inset-0 bg-gradient-to-tr from-brand-500/20 to-transparent rounded-full animate-[spin_4s_linear_infinite] origin-center"></div>
-
-                    <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
-                        <span class="text-xs text-brand-500 font-mono tracking-[0.3em] uppercase mb-2">Accuratezza Obiettivi</span>
-                        <div class="text-6xl md:text-8xl font-black text-white tracking-tighter">
-                            74<span class="text-brand-500 text-4xl md:text-5xl">%</span>
-                        </div>
-                        <div class="mt-4 px-4 py-1 bg-brand-500/10 border border-brand-500/20 rounded text-brand-500 font-mono text-sm uppercase">
-                            Stato: Scansione Attiva
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="w-full lg:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-6">
-                
-                <div class="bg-slate-900/50 border border-slate-800 p-6 rounded-2xl hover:border-brand-500/50 transition-colors group">
-                    <h4 class="text-slate-500 text-xs font-bold uppercase mb-2 tracking-widest group-hover:text-brand-500 transition-colors">Profondità Database</h4>
-                    <div class="text-3xl font-bold text-white mb-1">8.224+</div>
-                    <p class="text-sm text-slate-400">Match storici processati per perfezionare gli algoritmi di "Pressione Offensiva".</p>
-                </div>
-
-                <div class="bg-slate-900/50 border border-slate-800 p-6 rounded-2xl hover:border-brand-500/50 transition-colors group">
-                    <h4 class="text-slate-500 text-xs font-bold uppercase mb-2 tracking-widest group-hover:text-brand-500 transition-colors">Mercato Principale</h4>
-                    <div class="text-3xl font-bold text-white mb-1">Over 0.5 / 1.5 FT</div>
-                    <p class="text-sm text-slate-400">Massima efficienza registrata su scenari di assedio nel secondo tempo.</p>
-                </div>
-
-                <div class="bg-slate-900/50 border border-slate-800 p-6 rounded-2xl hover:border-brand-500/50 transition-colors group">
-                    <h4 class="text-slate-500 text-xs font-bold uppercase mb-2 tracking-widest group-hover:text-brand-500 transition-colors">Latenza Scansione</h4>
-                    <div class="text-3xl font-bold text-white mb-1">&lt; 0.8s</div>
-                    <p class="text-sm text-slate-400">Tempo di calcolo tra la variazione dei tiri live e l'invio dell'alert su Telegram.</p>
-                </div>
-
-                <div class="bg-slate-900/50 border border-slate-800 p-6 rounded-2xl hover:border-brand-500/50 transition-colors group">
-                    <h4 class="text-slate-500 text-xs font-bold uppercase mb-2 tracking-widest group-hover:text-brand-500 transition-colors">Moduli Operativi</h4>
-                    <div class="text-3xl font-bold text-white mb-1">6 Strategie</div>
-                    <p class="text-sm text-slate-400">LateGame, Momentum, GoalTension, Rimonta, Favorite e Pressione Aggregata.</p>
-                </div>
-
-            </div>
-        </div>
+  <!-- HERO -->
+  <header class="relative overflow-hidden min-h-screen flex items-center justify-center bg-grid">
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-24 left-1/2 -translate-x-1/2 w-[34rem] h-[34rem] bg-brand-500/15 blur-[120px] rounded-full"></div>
     </div>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-6 py-16 text-center">
+      <div class="flex justify-center mb-8">
+        <img src="logofieldmind.png" alt="FieldMind Logo" class="w-64 md:w-[420px] h-auto object-contain rounded-xl shadow-[0_0_40px_rgba(0,255,136,0.2)]">
+      </div>
+
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-brand-500/20 bg-slate-900/80 text-xs md:text-sm font-semibold uppercase tracking-widest text-brand-500 mb-6">
+        <span class="relative flex h-3 w-3">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-500 opacity-70"></span>
+          <span class="relative inline-flex rounded-full h-3 w-3 bg-brand-500"></span>
+        </span>
+        Radar live attivo sulle partite di oggi
+      </div>
+
+      <h1 class="text-4xl md:text-7xl font-black text-white leading-tight uppercase tracking-tight max-w-5xl mx-auto">
+        +70,73€ netti in soli 6 giorni<br>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-emerald-400">con stake fisso 10€</span>
+      </h1>
+
+      <p class="mt-6 text-lg md:text-2xl text-slate-300 max-w-4xl mx-auto">
+        37 giocate, 24 vinte, <span class="text-brand-500 font-bold">ROI +19,12%</span>. FieldMind intercetta la pressione offensiva live e ti invia l'alert prima che la quota crolli.
+      </p>
+
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+        <div class="bg-slate-950 border border-slate-800 rounded-2xl p-6 text-center">
+          <div class="text-3xl font-black text-brand-500">37</div>
+          <div class="text-sm uppercase tracking-wider text-slate-400 mt-2">Segnali</div>
+        </div>
+        <div class="bg-slate-950 border border-slate-800 rounded-2xl p-6 text-center">
+          <div class="text-3xl font-black text-brand-500">24</div>
+          <div class="text-sm uppercase tracking-wider text-slate-400 mt-2">Vinti</div>
+        </div>
+        <div class="bg-slate-950 border border-slate-800 rounded-2xl p-6 text-center">
+          <div class="text-3xl font-black text-brand-500">64,8%</div>
+          <div class="text-sm uppercase tracking-wider text-slate-400 mt-2">Win Rate</div>
+        </div>
+        <div class="bg-slate-950 border border-brand-500/30 rounded-2xl p-6 text-center">
+          <div class="text-3xl font-black text-brand-500">+70,73€</div>
+          <div class="text-sm uppercase tracking-wider text-brand-500 mt-2">Profitto Netto</div>
+        </div>
+        <div class="bg-slate-950 border border-brand-500/30 rounded-2xl p-6 text-center">
+          <div class="text-3xl font-black text-brand-500">+19,12%</div>
+          <div class="text-sm uppercase tracking-wider text-brand-500 mt-2">ROI</div>
+        </div>
+      </div>      
+  </header>
+  
+  <!-- BREAKDOWN -->
+  <section class="py-24 bg-slate-950">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-black text-white uppercase tracking-tight">Non solo i giorni positivi</h2>
+        <p class="mt-4 text-slate-400 text-lg max-w-3xl mx-auto">
+          La credibilità non nasce nascondendo i giorni difficili. Nasce mostrando il quadro completo.
+        </p>
+    <div class="grid md:grid-cols-5 gap-4 mt-12">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 text-center">
+          <div class="text-white font-bold text-lg">23 Mar</div>
+          <div class="text-slate-400 mt-2 text-sm">5 segnali • 5/5 Vinti</div>
+          <div class="text-brand-500 font-black text-2xl mt-3">+42,99€</div>
+        </div>
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 text-center">
+          <div class="text-white font-bold text-lg">24-25 Mar</div>
+          <div class="text-slate-400 mt-2 text-sm">3 segnali • 2 Vinti</div>
+          <div class="text-brand-500 font-black text-2xl mt-3">+7,00€</div>
+        </div>
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 text-center">
+          <div class="text-white font-bold text-lg">26 Mar</div>
+          <div class="text-slate-400 mt-2 text-sm">8 segnali • 6 Vinti</div>
+          <div class="text-brand-500 font-black text-2xl mt-3">+30,75€</div>
+        </div>
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 text-center">
+          <div class="text-white font-bold text-lg">27 Mar</div>
+          <div class="text-slate-400 mt-2 text-sm">7 segnali • 4 Vinti</div>
+          <div class="text-red-400 font-black text-2xl mt-3">-4,17€</div>
+        </div>
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 text-center">
+          <div class="text-white font-bold text-lg">28 Mar</div>
+          <div class="text-slate-400 mt-2 text-sm">14 segnali • 7 Vinti</div>
+          <div class="text-red-400 font-black text-2xl mt-3">-5,84€</div>
+        </div>
+      </div> 
+      
+      <div class="grid md:grid-cols-5 gap-4">               
+      </div>
+    </div>
+  </section>
+
+  <!-- COME FUNZIONA -->
+  <section class="py-24 bg-slate-900 border-y border-slate-800">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-4xl md:text-5xl font-black text-white uppercase tracking-tight">Come funziona davvero</h2>
+      <p class="mt-4 text-slate-400 text-lg max-w-3xl mx-auto">
+        Niente fumo. Niente sensazioni. Solo live, dati e timing.
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-6 mt-12">
+        <div class="bg-slate-950 border border-slate-800 rounded-2xl p-8">
+          <div class="text-4xl mb-4">📡</div>
+          <h3 class="text-xl font-bold text-white">Monitora</h3>
+          <p class="text-slate-400 mt-3">FieldMind segue centinaia di partite live in tempo reale.</p>
+        </div>
+
+        <div class="bg-slate-950 border border-slate-800 rounded-2xl p-8">
+          <div class="text-4xl mb-4">⚡</div>
+          <h3 class="text-xl font-bold text-white">Rileva</h3>
+          <p class="text-slate-400 mt-3">Quando la pressione offensiva sale davvero, il sistema intercetta il momento giusto.</p>
+        </div>
+
+        <div class="bg-slate-950 border border-slate-800 rounded-2xl p-8">
+          <div class="text-4xl mb-4">📲</div>
+          <h3 class="text-xl font-bold text-white">Invia</h3>
+          <p class="text-slate-400 mt-3">Il segnale arriva su Telegram in tempo reale, prima che il momento migliori o sparisca.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+<section class="py-16 text-center px-6">
+
+  <h2 class="text-3xl font-bold mb-6">
+    Guarda come funziona davvero
+  </h2>
+
+  <p class="text-gray-400 mb-8">
+    Nessuna teoria. Solo segnali live reali.
+  </p>
+
+  <div class="max-w-3xl mx-auto">
+    <video controls class="w-full rounded-xl">
+      <source src="video-demo.mp4" type="video/mp4">
+    </video>
+  </div>
+
 </section>
 
-    <section class="py-24 relative overflow-hidden bg-slate-950">
-        <div class="absolute inset-0 bg-brand-500 opacity-[0.03]"></div>
-        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
-            <h2 class="text-4xl md:text-5xl font-extrabold text-white uppercase tracking-tight mb-8">Il prossimo alert sta per suonare.<br>Sei dentro o sei fuori?</h2>
-            
-            <a href="https://t.me/fieldmind_app" class="inline-flex items-center justify-center gap-3 px-10 py-5 text-xl font-bold text-slate-950 bg-brand-500 rounded-lg hover:bg-white transition-all duration-300 shadow-[0_0_50px_rgba(0,255,136,0.5)] transform hover:scale-105">
-                <svg class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM16.64 8.8C16.49 10.38 15.84 14.22 15.51 15.99C15.37 16.74 15.09 16.99 14.83 17.02C14.25 17.07 13.81 16.64 13.25 16.27C12.37 15.69 11.87 15.33 11.02 14.77C10.03 14.12 10.67 13.76 11.24 13.18C11.39 13.03 13.95 10.7 14 10.49C14.01 10.46 14.01 10.35 13.93 10.29C13.85 10.23 13.74 10.25 13.66 10.27C13.54 10.29 11.7 11.52 8.12 13.96C7.6 14.32 7.12 14.49 6.69 14.48C6.21 14.47 5.29 14.2 4.61 13.98C3.77 13.71 3.11 13.57 3.17 13.11C3.2 12.87 3.53 12.62 4.16 12.36C8.03 10.68 10.61 9.58 11.9 9.05C15.58 7.54 16.34 7.28 16.84 7.27C16.95 7.27 17.2 7.3 17.36 7.43C17.49 7.54 17.53 7.69 17.54 7.8C17.54 7.87 17.53 8.01 17.52 8.07C16.64 8.8 16.64 8.8 16.64 8.8Z"/>
-                </svg>
-                VOGLIO ENTRARE NEL CANALE ORA
-            </a>
-            <p class="mt-6 text-slate-500">Unisciti alla rivoluzione del Live Betting Algoritmico.</p>
-        </div>
-    </section>
+  <!-- PROOF -->
+  <section class="py-24 bg-slate-950">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <h2 class="text-4xl md:text-5xl font-black text-white uppercase tracking-tight">La prova è nel campo</h2>
+        <p class="mt-4 text-slate-400 text-lg max-w-3xl mx-auto">
+          Alert reali. Esiti reali. Report completi. Nessun ritaglio furbo.
+        </p>
+      </div>
 
-    <footer class="bg-slate-950 py-8 text-center border-t border-slate-900">
-        <p class="text-slate-600 text-sm">© 2026 FieldMind. Tutti i diritti riservati.<br>Il gioco può causare dipendenza patologica. Gioca responsabilmente.</p>
-    </footer>
+      <div class="grid lg:grid-cols-2 gap-10 items-start">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-3">
+          <img src="./screen torino.png" alt="Alert FieldMind" class="w-full rounded-xl">
+        </div>
+
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-3">
+          <img src="./radar-giornaliero.png" alt="Esito alert FieldMind" class="w-full rounded-xl">
+        </div>
+
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-3">
+          <img src="./torino esito.png" alt="Esito alert FieldMind" class="w-full rounded-xl">
+        </div>
+        
+      </div>      
+    </div>
+  </section>
+
+  <!-- TECNICA -->
+  <section class="py-24 bg-slate-900 border-y border-slate-800">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-4xl md:text-5xl font-black text-white uppercase tracking-tight">Perché i segnali arrivano prima</h2>
+      <p class="mt-4 text-slate-400 text-lg max-w-3xl mx-auto">
+        Dietro FieldMind c’è un motore che filtra rumore, segue il live e individua i momenti in cui il match cambia davvero.
+      </p>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12 text-left">
+        <div class="bg-slate-950 border border-slate-800 rounded-2xl p-6">
+          <h4 class="text-xl font-bold text-white">Scansione live</h4>
+          <p class="text-slate-400 mt-3">Analizza simultaneamente più partite e più mercati.</p>
+        </div>
+        <div class="bg-slate-950 border border-slate-800 rounded-2xl p-6">
+          <h4 class="text-xl font-bold text-white">Pressione offensiva</h4>
+          <p class="text-slate-400 mt-3">Legge ritmo, tiri e intensità dei minuti recenti.</p>
+        </div>
+        <div class="bg-slate-950 border border-slate-800 rounded-2xl p-6">
+          <h4 class="text-xl font-bold text-white">Filtro anti-rumore</h4>
+          <p class="text-slate-400 mt-3">Riduce falsi segnali, dump statistici e anomalie live.</p>
+        </div>
+        <div class="bg-slate-950 border border-slate-800 rounded-2xl p-6">
+          <h4 class="text-xl font-bold text-white">Alert immediati</h4>
+          <p class="text-slate-400 mt-3">Il segnale arriva su Telegram quando conta davvero.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINALE -->
+  <section class="py-24 relative overflow-hidden bg-slate-950 text-center">
+    <div class="max-w-4xl mx-auto px-6 relative z-10">
+      <h2 class="text-4xl md:text-6xl font-black text-white uppercase tracking-tight">
+        Il prossimo alert sta per partire.<br>
+        Sei dentro o lo guardi da fuori?
+      </h2>
+
+      <p class="mt-6 text-xl text-slate-400 max-w-3xl mx-auto">
+        FieldMind non si misura sulla singola giocata. Si misura sulla continuità, sulla disciplina e sulla capacità di restare profittevoli nel tempo.
+      </p>
+
+      <a href="https://t.me/fieldmind_app" class="inline-flex items-center justify-center gap-3 px-10 py-5 text-xl font-black text-slate-950 bg-brand-500 rounded-xl hover:bg-white transition-all duration-300 shadow-[0_0_50px_rgba(0,255,136,0.45)] hover:scale-105 mt-10">
+        VOGLIO ENTRARE NEL CANALE ORA
+      </a>
+
+      <p class="mt-5 text-red-400 font-semibold">
+        Gli alert stanno partendo ora. Entra prima del prossimo.
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 py-10 text-center border-t border-slate-900">
+    <p class="text-slate-500 text-sm max-w-3xl mx-auto px-6">
+      FieldMind è uno strumento basato su dati live. Le performance passate non garantiscono risultati futuri. Il gioco comporta rischi economici e deve essere praticato responsabilmente.
+    </p>
+  </footer>
 
 </body>
 </html>
